@@ -9,6 +9,7 @@
 * 打Log的时候可以直接用logd + logt来快速实现，在自己不太确定的时候得先打开log，当然也可以自己规范Logger类。
 * 合理利用Gradle的动态任务来做一些事情，能加速很多操作，比如说生成临时的变量等。
 * 合理使用Gradle的编译技巧，提高编译速度。[Gradle的一些技巧](http://tikitoo.github.io/2016/05/26/android-studio-gradle-build-run-faster/)
+* [Speed Up Gradle Build In Android Studio](https://medium.com/@101/speed-up-gradle-build-in-android-studio-80a5f74ac9ed#.k815t2f9u)
 
 ##What the fuck?
 
