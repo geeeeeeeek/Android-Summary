@@ -1,5 +1,5 @@
-#Android开发总结
-##Speed up
+# Android开发总结
+## Speed up
 
 * 如果在用Shadowsocks的话可以给Android studio也加上proxy来加快Gradle的下载，在preference里面修改http Proxy方式为socks并且设置ip：127.0.0.1， 端口1080，也就是用本机来代理。
 * 用Gradle下载一些新的库时候，如果觉得慢你可以建立另外一个project， 在另外一个project来下载maven库，下载好了开启offline模式一键同步另外工程下好的库，再也不用浪费时间在等库下载了。
@@ -11,7 +11,7 @@
 * 合理使用Gradle的编译技巧，提高编译速度。[Gradle的一些技巧](http://tikitoo.github.io/2016/05/26/android-studio-gradle-build-run-faster/)
 * [Speed Up Gradle Build In Android Studio](https://medium.com/@101/speed-up-gradle-build-in-android-studio-80a5f74ac9ed#.k815t2f9u)
 
-##What the fuck?
+## What the fuck?
 
 * 在Gradle中配置properties时候注意你从properties中拿的中文可能是乱码，可用unicode替代。
 * 5.0和5.1系统的EditText的默认padding边距是不一样的，解决办法是在java代码中判断sdk api 然后给5.1系统加一个padding 好像是4dp还是8dp。
@@ -20,7 +20,7 @@
 * 用Instant Run的时候如果遇到修改了后仍然提示“No changes deploy”, 解决方案是拔数据线重新插。
 * 你的recyclerView的父布局是LinearLayout并且 android:orientation="horizontal"，而且你的RecyclerView设置了Weight的话，你会发现每次收起弹出键盘的时候recyclerView里面的列表都会滚动到顶部，怎么解释我也不知道。
 
-##Be a habit
+## Be a habit
 
 * 代码函数块中除了无意义的0等以为，请不要在代码中出现Magic number，请给它取个漂亮的名字，并final static。
 * 在if判断中尽量做到 if（null == object） 而不要if(object == null),很容易你少了一个等号，这种bug极其难被察觉。
@@ -30,7 +30,7 @@
 * 回调函数的命名尽量是onXXX(){}，加载网络数据函数可命名为loadXXX(){}等等。
 * 写一个新的feature的顺序我觉得应该是：思考逻辑是否跑通 -> 技术会不会存在问题 -> Model -> Network -> Presenter -> Xml -> Adapter(如果有列表) -> View。
 
-##Memory optimize
+## Memory optimize
 
 * 在有键盘弹出的情况下不要在该页面设置View的Y方向的weight，因为这样你弹出键盘的时候你设置adjustSize的时候那个view会被挤压很难看。
 * 合理利用Java的内存管理机制，activity中intent传递对象也是传递地址，所以只需要在另外页面改变当前指，回到原页面后只需要update一下即可，不需要再onActivityResult中再取值。
@@ -42,7 +42,7 @@
 * 在页面中执行new Handler().postDelayed()函数时候，记得要判断当前页面是否还存在。
 * 巧用各种集合、各种容器（ArrayList、LinkedList、HashMap、SparseArray等）
 
-##Persistence
+## Persistence
 
 * 用户的个人信息千万不要存储在app目录下的Cache文件下，不然用户清除一下垃圾，“什么？我又要登录了？”。反过来，如果是不重要的缓存文件，请尽量存储在Cache下，不然app不主动清理，系统是清理不了的。
 * 如果想做缓存方案，请先确立详细的策略再下手，不然发现有问题，再升级是很伤脑筋的...比如更换数据库等。
