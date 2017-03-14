@@ -40,6 +40,7 @@
 * 请考虑统一管理Exception，可使用Bugly等工具来收集统一。
 * 封装一个函数或接口尽量不要对外暴露你是如何实现，随时想着这个函数或接口是给一个陌生网友用的。
 * 在页面中执行new Handler().postDelayed()函数时候，记得要判断当前页面是否还存在。
+* 巧用各种集合、各种容器（ArrayList、LinkedList、HashMap、SparseArray等）
 
 ##Persistence
 
