@@ -29,6 +29,7 @@
 * 没完成或没写好的功能或者trick的功能块，请加上 // TODO，并且在github上加issue，避免以后遗漏掉该问题。
 * 回调函数的命名尽量是onXXX(){}，加载网络数据函数可命名为loadXXX(){}等等。
 * 写一个新的feature的顺序我觉得应该是：思考逻辑是否跑通 -> 技术会不会存在问题 -> Model -> Network -> Presenter -> Xml -> Adapter(如果有列表) -> View。
+* 学会封装代码，少写重复的代码。
 
 ## Memory optimize
 
