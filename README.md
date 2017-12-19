@@ -30,6 +30,7 @@
 * 回调函数的命名尽量是onXXX(){}，加载网络数据函数可命名为loadXXX(){}等等。
 * 写一个新的feature的顺序我觉得应该是：思考逻辑是否跑通 -> 技术会不会存在问题 -> Model -> Network -> Presenter -> Xml -> Adapter(如果有列表) -> View。
 * 学会封装代码，少写重复的代码。
+* 单个方法体不要过长，拆分臃肿方法
 * Git / CodeReView
 
 ## Memory optimize
