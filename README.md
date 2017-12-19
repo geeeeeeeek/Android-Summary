@@ -23,7 +23,7 @@
 ## Be a habit
 
 * 代码函数块中除了无意义的0等以为，请不要在代码中出现Magic number，请给它取个漂亮的名字，并final static。
-* 在if判断中尽量做到 if（null == object） 而不要if(object == null),很容易你少了一个等号，这种bug极其难被察觉。
+* 时刻注意空指针，CONSTANT.equals(obj)和obj.equals(CONSTANT) 
 * 在一个app中会有很多文字按钮等，尽量自己建立一个ContentTextView来继承TextView，如果设计师说要统一换字体样式的话只要改一个文件就好，其他按钮、layout同理，酌情考虑。
 * 注释中//后空一格，首字母大写！
 * 没完成或没写好的功能或者trick的功能块，请加上 // TODO，并且在github上加issue，避免以后遗漏掉该问题。
