@@ -43,6 +43,10 @@
 * 请考虑统一管理Exception，可使用Bugly等工具来收集统一。
 * 封装一个函数或接口尽量不要对外暴露你是如何实现，随时想着这个函数或接口是给一个陌生网友用的。
 * 在页面中执行new Handler().postDelayed()函数时候，记得要判断当前页面是否还存在。
+* 避免枚举，枚举往往需要两倍多的内存
+* 巧用各种集合、各种容器（ArrayList、LinkedList、LinkedHashMap、SparseArray等）
+* 避免在循环中创建临时对象
+* Bitmap 及时释放
 * 巧用各种集合、各种容器（ArrayList、LinkedList、LinkedHashMap、SparseArray等）
 * 采用RxJava、Retrofit2、ButterKnife、Glide、EventBus等类库，提高开发效率。
 * LeakCanary
