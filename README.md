@@ -35,8 +35,8 @@
 
 ## Memory optimize
 
+* 耗时操作放入子线程
 * 在有键盘弹出的情况下不要在该页面设置View的Y方向的weight，因为这样你弹出键盘的时候你设置adjustSize的时候那个view会被挤压很难看。
-* 合理利用Java的内存管理机制，activity中intent传递对象也是传递地址，所以只需要在另外页面改变当前指，回到原页面后只需要update一下即可，不需要再onActivityResult中再取值。
 * 用MVP模式中一定要主要内存泄露问题，Presenter注意要弱引用, 注意在处理Fragment和Adapter情况下的数据同步问题。
 * 用Handler一定要考虑内存泄露问题，请弱引用，在任何子线程中回调的接口中考虑一下这个页面已经被关闭的情况。
 * 你的Activity的Context给别人的时候，一定要考虑它是不是static等类，是不是会持有你的Context引用，不然的话不给！！！
