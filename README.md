@@ -43,8 +43,10 @@
 * 请考虑统一管理Exception，可使用Bugly等工具来收集统一。
 * 封装一个函数或接口尽量不要对外暴露你是如何实现，随时想着这个函数或接口是给一个陌生网友用的。
 * 在页面中执行new Handler().postDelayed()函数时候，记得要判断当前页面是否还存在。
-* 巧用各种集合、各种容器（ArrayList、LinkedList、HashMap、SparseArray等）
+* 巧用各种集合、各种容器（ArrayList、LinkedList、LinkedHashMap、SparseArray等）
 * 采用RxJava、Retrofit2、ButterKnife、Glide、EventBus等类库，提高开发效率。
+* LeakCanary
+
 ## Persistence
 
 * 用户的个人信息千万不要存储在app目录下的Cache文件下，不然用户清除一下垃圾，“什么？我又要登录了？”。反过来，如果是不重要的缓存文件，请尽量存储在Cache下，不然app不主动清理，系统是清理不了的。
